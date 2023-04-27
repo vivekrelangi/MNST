@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var TimerhHandler;
+            function startInterval(){
+                TimerhHandler = setInterval("startTime();"1000);
+            }
+            function startTime(){
+                var tmpDate = new Date();
+                document.getElementById('t1').value = tmpDate.getSeconds();
+            }
+            function stopInterval(){
+                clearInterval(TimerhHandler);
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <div id="t1"></div>
+        </center>
+    </body>
+</html>

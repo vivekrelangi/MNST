@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 25px;
+}
+
+div {
+  color: hsl(0, 0%, 28%);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+div {
+  padding: 64px;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+          </style>
+          </head>
+          <body>
+    </head>
+        <body style="background-color: black;color: brown;">
+            <center>
+            <script type="text/javascript">
+                var arr=[];
+                function addEle(){
+                var ie=document.getElementById("t").value;
+                arr.push(ie);
+                console.log(arr);
+                }
+                function winner(){
+                    var len=arr.length;
+                    if (len<1){
+                        alert("Enter a name");
+                    }
+                    var len1=len-1;
+                    var w=Math.round(Math.random()*len1);
+                    //document.write("<p>Winner is "+arr[w]);
+                    var win1=document.getElementById("win");
+                    win1.innerHTML="<center>                            Winner is "+arr[w]+"</center>";
+                }
+            </script>
+            Enter name:<input type="text" style="background-color: rgb(65, 247, 9);"id="t" ><br><br>
+            <input type="button" style="background-color: aqua;" value="click here to clear" onclick="document.getElementById('t').value = '' "/><br><br>
+            <input type="button" style="background-color: rgb(241, 51, 190);"onclick="addEle()" value="Submit"><br><br>
+            <input type="button" style="background-color: rgb(90, 136, 242);"onclick="winner()" value="Announce Winner"><br><br>
+            <div id="win"></div>
+        </center>
+        </body>
+</html>

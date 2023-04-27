@@ -1,0 +1,70 @@
+use("msdDemo")
+/*db.cselab.insertMany([{
+    firstname:"vivek",
+    lastname:"goud",
+    branch:"cse",
+    python:60,
+    msd:70,
+    android:80,
+    devops:55
+},{firstname:"samba",
+lastname:"siva",
+branch:"cse",
+python:63,
+msd:73,
+android:83,
+devops:58},{firstname:"raja",
+lastname:"vinay",
+branch:"cse",
+python:90,
+msd:90,
+android:90,
+devops:95},{firstname:"durga",
+lastname:"rao",
+branch:"it",
+python:67,
+msd:77,
+android:87,
+devops:75},{firstname:"venkat",
+lastname:"sai",
+branch:"it",
+python:69,
+msd:79,
+android:89,
+devops:95},{firstname:"rama",
+lastname:"prabha",
+branch:"it",
+python:90,
+msd:80,
+android:87,
+devops:95}])
+db.cselab.find({branch:"cse"})
+db.cselab.find({branch:"cse"},{firstname:1,python:1,branch:1,_id:0})
+db.cselab.find({firstname:"durga"},{firstname:1,python:1,branch:1,_id:0})
+db.cselab.findOne({branch:"cse"},{firstname:1,python:1,branch:1,_id:0})
+db.cselab.findOne({firstname:"durga"},{firstname:1,python:1,branch:1,_id:0})
+db.cselab.find({python:70})
+db.cselab.find({python:{$gt:50}})
+db.cselab.find({python:{$gt:50}},{firstname:1,python:1,_id:0})
+db.cselab.find({python:{$gte:50}},{firstname:1,python:1,_id:0})
+db.CSE123.insertMany(
+    [
+        {
+            firstName:"prasad",
+            lastName:"Durga",
+            email:"ydp@abc.com",
+            marks:60
+        },
+        {
+            firstName:"Sirisha",
+            lastName:"V",
+            email:"sirisha@abc.com",
+            marks:70
+        }
+        {
+            firstName:"Pooja",
+            lastName:"P",
+            email:"pooja@abc.com",
+            marks:80
+        }
+    ])*/

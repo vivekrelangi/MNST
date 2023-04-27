@@ -1,0 +1,26 @@
+<html>
+    <head>
+        
+    </head>
+    <body style="background-color: black;">
+        <script type="text/javascript">
+            class Demo{
+                constructor(name, branch){
+                    this.name=name;
+                    this.branch=branch;
+                }
+                dispay(){
+                    console.log("HI WELCOME ALL");
+                }
+                static rocks(){
+                    console.log("BYE BYE");
+                }
+            }
+            const d=new Demo("Durga","CSE");
+            console.log(d.name);
+            console.log(d.branch);
+            d.dispay();
+            Demo.rocks();
+        </script>
+    </body>
+</html>

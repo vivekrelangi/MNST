@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Case Converter</title>
+    <script>
+  function disp() {
+   var input = document.getElementById("in").value;
+   var output = "";
+   for (var i = 0; i < input.length; i++) {
+    if (input[i] == input[i].toUpperCase()) {
+     output += input[i].toLowerCase();
+    } else {
+     output += input[i].toUpperCase();
+    }
+   }
+   document.getElementById("output").innerHTML = output;
+  }
+        function length() {
+            var input = document.getElementById("string").value;
+            var length = input.length;
+            var data = document.getElementById("result");
+            data.innerHTML = "<h5>The length of the input string is </h5> "  + length;
+        }
+ </script>
+</head>
+<body class="tab">
+    <div class="d1">
+        <div class="title">Convert Case</div><br>
+        <div  class="x1">
+            <label class="x2">Input:</label>
+            <input type="text" class="i1" id="in" onChange="disp()"><br><br>
+            <label class="x2" for="output">Output :</label>
+            <span id="output"></span>
+        </div>
+        <div class="x1"><br><br>
+            <label class="x2">Input:</label>
+            <input type="text" class="i2" id="string" onChange="length()">
+            <span id="result"></span>
+        </div>
+    </div>
+</body>
+</html>

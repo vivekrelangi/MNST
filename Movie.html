@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="movie.css">
+        <script>
+            function disp() {
+        var selector = document.getElementById("movie");
+        var selectedValue = selector.value;
+        var image = document.getElementById("pic");
+        switch(selectedValue) {
+          case "Dhookudu":
+            image.src = "https://m.media-amazon.com/images/I/81mix9IuiLL._RI_.jpg";
+            break;
+          case "Gabbarsingh":
+            image.src = "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/355dda32dd719376bcb10651261eb22c054068aadbf1c8661adbb0296c16304c._RI_V_TTW_.jpg";
+            break;
+          case "Waltaarveerayya":
+            image.src = "https://m.media-amazon.com/images/M/MV5BYTQ0OTA5OTEtZWFkNy00Y2Q4LWI1NGEtNDA5OGE0Y2JjZjQxXkEyXkFqcGdeQXVyMTE5NTEyNTg5._V1_.jpg";
+            break;
+          case "Varisu":
+            image.src = "https://images.news18.com/ibnlive/uploads/2022/08/vijay-2.jpg";
+            break;
+          case "Thunivu":
+            image.src = "https://www.cinejosh.com/newsimg/newsmainimg/thunivu-ott-streaming-date_b_0302231115.jpg";
+            break;
+            case "Star Wars":
+            image.src = "https://screenrant.com/wp-content/uploads/2022/11/Star-Wars-Franchise-Image.jpg";
+            break;
+            case "s1":
+            image.src = "Abs.jpg";
+            break;
+        }
+    }
+    function displayDetails() {
+            var selector = document.getElementById("movie");
+            var selectedValue = selector.value;
+            var seats = document.getElementById("seats").value;
+
+            var details = document.getElementById("details");
+            price=seats*150;
+            discount=seats*22.5;
+            final=price-discount;
+            details.innerHTML =" Movie Name:  "+  selectedValue +"<br>"+" No of seats: "+ seats + "<br>"+ "Ticket Price:    150 x " + seats + " = " + price +"<br>"+ " Discount 15% : " + discount +"<br>"+ "Final price : "+ final;
+            
+        }
+        </script>
+    </head>
+    <body>
+        <table class="tab" id="booking" border="0" width="30%" height="10%" cellpadding="10">
+            <caption><h1>Movie Ticket Booking</h1></caption>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required placeholder="Enter your Name"></td>
+            </tr>
+            <tr><td><label for="movie">Movie:</label></td>
+            <td><select id="movie" name="movie" required onchange="disp()">
+			<option value="s1">Select a movie</option>
+			<option value="Dhookudu">Dhookudu</option>
+			<option value="Gabbarsingh">Gabbarsingh</option>
+			<option value="Waltaarveerayya">Waltaarveerayya</option>
+            <option value="Varisu">Varisu</option>
+            <option value="Thunivu">Thunivu</option>
+            <option value="Star Wars">Star Wars</option>
+		</select></td></td>
+        <tr>
+            <td><label for="date">Booking Date:</label></td>
+		<td><input type="datetime-local" id="date" name="date" required>
+        </td></tr>
+        <tr><td><label for="time">Movie Time:</label></td>
+		<td><select id="time" name="time" required>
+			<option value="">Select a time</option>
+			<option value="9:00 AM">9:00 AM</option>
+			<option value="12:00 PM">12:00 PM</option>
+			<option value="3:00 PM">3:00 PM</option>
+			<option value="6:30 PM">6:30 PM</option>
+			<option value="10:00 PM">10:00 PM</option>
+		</select>
+        </td></tr>
+        <tr><td><label for="seats">Seats:</label></td>
+            <td><input type="number" id="seats" name="seats" min="1" max="7" required>
+        </td></tr>
+        <tr><td colspan="2"><button onclick="displayDetails()">Book Tickets</button></td></tr>
+        </table>
+        <div class="d2" id="details"></div>
+        <div class="x1">
+            <img id="pic" width=470px height=500px>
+        </div>
+    </body>
+</html>

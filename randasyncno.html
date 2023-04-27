@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            console.log("Getting Random Number");
+            
+            //a promise
+            let promise = new Promise(function(resolve,reject){
+                setTimeout(function (){
+                    resolve('promise resolved')},4000)
+                   
+
+                });
+                //async function
+            async function asynFunc(){
+                //wait until the promise resolves
+                //console.log("Hai")
+                
+                let result = await promise;
+                var r=Math.round(Math.random()*9);
+                console.log(r);
+                console.log("Byee");
+            }
+            asynFunc();
+            //console.log("Byee");
+            //calling the async function
+           
+        </script>
+    </body>
+</html>

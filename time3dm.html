@@ -1,0 +1,17 @@
+<html>
+    <head>
+        
+    </head>
+    <body style="background-color: black;">
+        <center><br>
+            <p id="demo" style="background-color:black;color:rgb(31, 142, 239);font-size: 230;font-family: 'Courier New', Courier, monospace;"></p>
+        <script type="text/javascript">
+            setInterval("disp()",1000);
+            function disp(name){
+                var date = new Date();
+                document.getElementById("demo").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+            }
+        </script>
+        </center>
+    </body>
+</html>

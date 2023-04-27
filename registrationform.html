@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <style>
+            body {
+                background: url(https://images.pexels.com/photos/4394725/pexels-photo-4394725.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+                background-repeat: no-repeat;
+                background-size: 2000px 1000px;
+            }
+            h1 {
+                font-family: Lucida Console;
+                font-size: 30px;
+                color: purple;
+            }
+            h4 {
+                font-family: cursive;
+                font-style: italic;
+                font-size: 15px;
+                color: rgb(241, 241, 241);
+            }
+            tr {
+                font-family: Cursive;
+                font-size: 20px;
+                color: rgb(204, 204, 204);
+            }
+            input[type=submit], input[type=reset] {
+                background-color: purple;
+                border: none;
+                color: rgb(0, 0, 0);
+                padding: 10px 25px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <center>
+                <h1>YOGA SUMMIT</h1>
+                <h4>Asanaas and Suryanamaskaras</h4>
+                <table cellspacing="10" cellpadding="10">
+                    <tr>
+                        <td><label for="tf1">Name:</label></td>
+                        <td><input type="text" name="tf1" placeholder="Enter name"></td>
+                    </tr style="color: skyblue">
+                    <tr>
+                        <td><label for="tf2">Password:</label></td>
+                        <td><input type="password" name="tf2" placeholder="Enter password"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="d1">Select DOB:</label></td>
+                        <td><input type="datetime-local" name="d1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ta">Address:</label></td>
+                        <td> <textarea row="10" cols="20" id="ta"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label>Select Contests:</label></td>
+                        <td>
+                            <input type="checkbox" name="cb1">Suryanamaskaraas<br>
+                            <input type="checkbox" name="cb1" checked>Asanaas<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Gender:</label></td>
+                        <td>
+                            <input type="radio" name="rb1" value="Male">M
+                            <input type="radio" name="rb1" value="Male">F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Select Country:</label></td>
+                        <td>
+                            <input type="radio" name="rb2" value="AEC">IND<br>
+                            <input type="radio" name="rb2" value="ACET">UK <br>
+                            <input type="radio" name="rb2" value="ACOE">US<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="courses">city names:</label></td>
+                        <td>
+                            <input list="course_names" name="courses">
+                            <datalist id="course_names">
+                                <option value="Kakinada">Kakinada</option>
+                                <option value="Surampalem">Surampalem</option>
+                                <option value="Rajamahendravaram">Rajamahendravaram</option>
+                                <option value="Visakhapatnam">Visakhapatnam</option>
+                                <option value="Vijayawada">Vijayawada</option>
+                                <option value="Samarlakot">Samarlakot</option>
+                            </datalist>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Faculty">Select Experience</label></td>
+                        <td>
+                            <select id="Faculty">
+                                <option value="YDP">Beginner</option>
+                                <option>Pro</option>
+                                <option>Max</option>
+                                <option>Pro Max</option>
+                                <option>Ultra Pro Max</option>
+                                <option>Legend</option>
+                                <option>Ultimate</option>
+                                <option>God</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><center><input type="reset" value="reset"></center></td>
+                        <td><center><input type="submit" value="submit"></center></td>
+                    </tr>
+                </table>
+            </center>
+        </form>
+    </body>
+</html>

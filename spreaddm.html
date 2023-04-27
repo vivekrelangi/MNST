@@ -1,0 +1,35 @@
+<html>
+    <head>
+        
+    </head>
+    <body style="background-color: black;">
+        <script type="text/javascript">
+          const a=[1,2,3,4,5,6,7] ;
+          console.log(a);//array type
+          console.log(...a);//1 2 3 4 5(use of spread operator is to spread the items)
+          const b=[6,7,8,9];
+          const d=[a,b];
+          console.log(d);
+          console.log(...d);
+          const c=[...a,...b];
+          console.log(c);
+
+          console.log(Math.min(...c)); 
+
+          const emp1={
+            name: 'Durga',
+            branch: 'CSE'
+          };
+          const clonedemp1={...emp1};
+          console.log(clonedemp1);
+
+          const emp1p={
+            college: 'ACOE',
+            location: 'Surampalem',
+            //name:'prasad' //if you are again including name property previous name property is updated with new name property 
+          }
+          const staff={...emp1,...emp1p};
+          console.log(staff);
+        </script>
+    </body>
+</html>

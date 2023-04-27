@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type"text/javascript>
+        let s1=new Set();
+        console.log(s1);
+        
+        let s2=new Set(['prasad',1,'durga',true,'prasad']);
+        console.log(s2);
+        s2.add('sirisha');
+        s2.delete(true);
+        console.log(s2.has('prasad'));
+        console.log(s2);
+        for (let i of s2){
+            console.log(i)
+        }
+       
+        let cou1= new Set(['prasad','durga','sirisha','pawan','kalyan']);
+        let cou2= new Set(['swathi','durga','anusha','pooja','kalyan']);
+        let common = [];
+
+    for (let i of cou2) {
+            if (cou1.has(i)) {
+            common.push(i);
+        }        
+    } 
+     console.log(common);
+        </script>
+    </body>
+</html>

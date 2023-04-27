@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color:rgb(17, 16, 16);">
+        <script type="text/javascript">
+            let courses= ["JAVA", "PYTHON", "XML", "ANDROID"];
+            let len = courses.length;
+            console.log(len);
+
+            let numbers = [1, 2, 3, 4, 5];
+            let rev=numbers.reverse();
+            console.log(rev);
+
+            courses.push("DEVOPS","NODE JS");
+            console.log(courses);
+
+            let de=courses.pop();
+            console.log(de);
+            console.log(courses);
+
+           
+
+            let c=numbers.shift();
+            console.log(c);
+            console.log(numbers);
+
+            let f=courses.unshift("HTML");
+            console.log(f);
+            console.log(courses);
+        
+
+            function isOdd(element) {
+                return element % 2 !== 0;
+                }
+            
+            let num= [2, 8, 1, 3, 4];
+            let firstOdd = num.findIndex(isOdd);
+            console.log(firstOdd);
+
+            function isEven(element) {
+                return element % 2 == 0;
+                }
+            let even = num.find(isEven);
+            console.log(even);
+
+            let check=courses.includes("ML");
+            console.log(check);
+            courses.fill("MEANSTACK");
+            console.log(courses);
+
+
+        </script>
+    </body>
+</html>

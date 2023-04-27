@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            setInterval("disp()",1000);
+            function disp(name){
+                var date = new Date(); 
+                document.getElementById("demo").innerHTML = date.getFullYear();//+","+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+",Day:"+date.getDay()+",Month:"+date.getMonth();
+                document.getElementById("d1").innerHTML = date.getHours();
+                document.getElementById("d2").innerHTML = date.getMinutes();
+                document.getElementById("d3").innerHTML = date.getSeconds();
+                var month = date.getMonth();
+                var day = date.getDay();
+                if(day==0){
+                    document.getElementById("d4").innerHTML = "Sun";
+                }
+                if(day==1){
+                    document.getElementById("d4").innerHTML = "Mon";
+                }
+                if(day==2){
+                    document.getElementById("d4").innerHTML = "Tue";
+                }
+                if(day==3){
+                    document.getElementById("d4").innerHTML = "Wed";
+                }
+                if(day==4){
+                    document.getElementById("d4").innerHTML = "Thu";
+                }
+                if(day==5){
+                    document.getElementById("d4").innerHTML = "Fri";
+                }
+                if(day==6){
+                    document.getElementById("d4").innerHTML = "Sat";
+                }
+                if(month==0)
+                {
+                    document.getElementById("d5").innerHTML = "Jan";
+                }
+                if(month==1)
+                {
+                    document.getElementById("d5").innerHTML = "Feb";
+                }
+                if(month==2)
+                {
+                    document.getElementById("d5").innerHTML = "Mar";
+                }
+                if(month==3)
+                {
+                    document.getElementById("d5").innerHTML = "Apr";
+                }
+                if(month==4)
+                {
+                    document.getElementById("d5").innerHTML = "May";
+                }
+                if(month==5)
+                {
+                    document.getElementById("d5").innerHTML = "Jun";
+                }
+                if(month==6)
+                {
+                    document.getElementById("d5").innerHTML = "Jul";
+                }
+                if(month==7)
+                {
+                    document.getElementById("d5").innerHTML = "Aug";
+                }
+                if(month==8)
+                {
+                    document.getElementById("d5").innerHTML = "Sep";
+                }
+                if(month==9)
+                {
+                    document.getElementById("d5").innerHTML = "Oct";
+                }
+                if(month==10)
+                {
+                    document.getElementById("d5").innerHTML = "Nov";
+                }
+                if(month==11)
+                {
+                    document.getElementById("d5").innerHTML = "Dec";
+                }
+                //a1=document.getElementById("d1");
+                //a1.style.rotate();
+            }   
+        </script>
+        <style>
+            body{
+                background-color: black;
+                color: white;
+            }
+            .inline-block-child {
+                display: inline-block;
+            }
+            #demo{
+                background-color: aqua;
+            }
+            #d1{
+                background-color: gold;
+                height: 40px;
+                width: 40px;
+                
+            }
+            #d2{
+                background-color: gold;
+                height: 40px;
+                width: 40px;
+            }
+            #d3{
+                background-color: gold;
+                height: 40px;
+                width: 40px;
+            }   
+            #d0{
+                background-color: aqua;
+                height: 160px;
+                width: 700px;
+            }
+            #d4{
+                background-color: aqua;
+            }
+            #d5{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <center><br>
+            <div class='parent' id="d0">
+                <h1>
+                <div class='child' id="demo" ></div>
+                </h1>
+                <h1>
+                    <center>
+                <div class='child inline-block-child' id="d1" ></div>
+                <div class='child inline-block-child' id="d2" ></div>
+                <div class='child inline-block-child' id="d3" ></div>
+                    </center>
+                </h1>
+                <h1>
+                    <center>
+                <div class='child inline-block-child' id="d4" ></div>
+                <div class='child inline-block-child' id="d5" ></div>
+                    </center>
+                </h1>
+
+            </div>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function moveItem1() {
+			var listA = document.getElementById("s1");
+			var listB = document.getElementById("s2");
+
+			// get the selected item in List A
+			var selectedItem = listA.options[listA.selectedIndex];
+
+			// remove the selected item from List A
+			listA.remove(listA.selectedIndex);
+
+			// add the selected item to List B
+			listB.add(selectedItem);
+		}
+        function moveItem2() {
+			var listA = document.getElementById("s1");
+			var listB = document.getElementById("s2");
+
+			// get the selected item in List A
+			var selectedItem = listB.options[listB.selectedIndex];
+
+			// remove the selected item from List A
+			listB.remove(listB.selectedIndex);
+
+			// add the selected item to List B
+			listA.add(selectedItem);
+		}
+        </script>
+    </head>
+    <body style="background-color:black">
+        <center>
+            <table style="background-color:rgb(216, 14, 14)">
+                <tr>
+                    <td>
+                        <select id="s1" size="3">
+                            <option value="Ashok">Ashok</option>
+                            <option value="Badhri">Badhri</option>
+                            <option value="Chakri">Chakri</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="button" id="b1" value=">>" onClick="moveItem1()"><br><br>
+                        <input type="button" id="b2" value="<<" onClick="moveItem2()">
+                    </td>
+                    <td>
+                        <select id="s2" size="3">
+                            <option value="Fayaz">Fayaz</option>
+                            <option value="Gayatri">Gayatri</option>
+                            <option value="Honey">Honey</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

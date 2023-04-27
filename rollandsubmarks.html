@@ -1,0 +1,89 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+           // const s507={
+             //   name:"A",
+               // subject:['s1','s2','s3'],
+                //marks:['1','2','3']
+            //}
+            const students=[
+                {id:507,name:"Ajay",subjects:["Java","PYTHON","RUBY"],marks:[77,81,75]},
+                {id:517,name:"Binod",subjects:["Java","PYTHON","RUBY"],marks:[67,71,79]},
+                {id:527,name:"Chandhra",subjects:["Java","PYTHON","RUBY"],marks:[69,76,54]}
+        ];
+        console.log(students[0].name);
+        console.log(students[1].name);
+        console.log(students[2].name);
+
+            function nam(){
+                //console.log("yo");
+                let a1=[507,517,527];
+                let a = document.getElementById("i").value;
+                console.log(a);
+                //let b = document.getElementById("i7").value;
+                //let c = document.getElementById("i17").value;
+                //let d = document.getElementById("i27").value;  
+                //console.log(b);
+                if (507==a){
+                    document.getElementById("n").innerHTML = students[0].name;
+                    document.getElementById("s1").innerHTML = students[0].subjects[0];
+                    document.getElementById("m1").innerHTML = students[0].marks[0];
+                    document.getElementById("s2").innerHTML = students[0].subjects[1];
+                    document.getElementById("m2").innerHTML = students[0].marks[1];
+                    document.getElementById("s3").innerHTML = students[0].subjects[2];
+                    document.getElementById("m3").innerHTML = students[0].marks[2];
+                }              
+                if (517==a){
+                    document.getElementById("n").innerHTML = students[1].name;
+                    document.getElementById("s1").innerHTML = students[1].subjects[0];
+                    document.getElementById("m1").innerHTML = students[1].marks[0];
+                    document.getElementById("s2").innerHTML = students[1].subjects[1];
+                    document.getElementById("m2").innerHTML = students[1].marks[1];
+                    document.getElementById("s3").innerHTML = students[1].subjects[2];
+                    document.getElementById("m3").innerHTML = students[1].marks[2];
+                }
+                if(527==a){
+                    document.getElementById("n").innerHTML = students[2].name;
+                    document.getElementById("s1").innerHTML = students[2].subjects[0];
+                    document.getElementById("m1").innerHTML = students[2].marks[0];
+                    document.getElementById("s2").innerHTML = students[2].subjects[1];
+                    document.getElementById("m2").innerHTML = students[2].marks[1];
+                    document.getElementById("s3").innerHTML = students[2].subjects[2];
+                    document.getElementById("m3").innerHTML = students[2].marks[2];
+                }
+
+            }
+            
+        </script>   
+        <center>
+                    <table cellpadding="10">
+                        <tr><td><label>Select ID:</label></td><td><select id="i" onchange="nam()">
+                            <option>choose roll no.</option>
+                            <option  id="i7" value="507">507</option>
+                            <option  id="i17" value="517">517</option>
+                            <option  id ="i27" value="527">527</option>
+                        </select></td></tr>
+                        <tr>
+                            <td>Name :</td>
+                            <td id="n"></td>
+                        </tr>
+                    </table><br>
+                    <table border="1" cellpadding="7" class="tab">
+                        <thead>
+                            <tr>
+                                <th>SUBJECT</th>
+                                <th>MARKS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="b1">
+                            <tr><td id="s1">null</td><td id="m1">null</td></tr>
+                            <tr><td id="s2">null</td><td id="m2">null</td></tr>
+                            <tr><td id="s3">null</td><td id="m3">null</td></tr>
+                        </tbody>
+                    </table>
+        </center>
+    </body>
+</html>

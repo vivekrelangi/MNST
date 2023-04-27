@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function radiocheck()
+            {
+                var selection=document.f1.col;
+                for(i=0;i<selection.length;i++)
+                if(selection[i].checked==true)
+                alert('SELECTED COLLEGE IS>>>>>>>>'+selection[i].value)
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f1">
+            <input type ="radio" name="col" value="Engineering College1">Eng1<br>
+            <input type ="radio" name="col" value="Engineering College2">Eng2<br>
+            <input type ="radio" name="col" value="Engineering College3">Eng3<br>
+            <input type="button" onclick="radiocheck()" value=" select college">
+        </form>
+    </body>
+</html>

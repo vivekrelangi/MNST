@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function disp()
+            {
+                var list= document.forms[0].CDATA_SECTION_NODE;
+                alert(list.options[list.selectedindex].value)
+
+            }
+            </script></head>
+            <body>
+                <form>
+                    <center>
+                        <select name="subj" onChange="disp()">
+
+                        <option value="durga prasad">meanstack</option>
+                        <option value="mani kante">cd</option>
+                        <option value="surya">cns</option>
+                        </select>
+                    </center>
+                </form>
+            </body>
+    </head>
+</html>

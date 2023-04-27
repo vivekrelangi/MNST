@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let person={
+                firstName: 'Durga',
+                lastName: 'Prasad'
+            };
+            //let firstName = person.firstName;
+            //let lastName = person.lastName;
+            //let { firstName,lastName} = person;
+            //console.log(firstName);
+            //console.log(lastName);
+            let { firstName,lastName,age=30} = person //to add age property with default value
+            console.log(age);
+            let secret = {
+                name: 'sirisha',
+                age:20
+            };
+            let{name:relation}=secret;//here alias for name is relation
+            console.log(relation);
+             
+            const emp={
+                name : 'Durga',
+                branch : 'CSE',
+                college : 'ACOE'
+            };
+            const { name, ...rest } = emp;
+            console.log(rest);
+        </script>
+    </body>
+</html>
