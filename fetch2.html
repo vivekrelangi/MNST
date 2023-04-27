@@ -1,0 +1,16 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            async function disp(){
+                const fileUrl = 'http://api.weatherstack.com/current?access_key'
+                fetch (fileUrl)
+                .then(c=>c.json)
+                .then(t=>console.log(t)) 
+
+            }
+        </script>
+    </body>
+</html>

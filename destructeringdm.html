@@ -1,0 +1,30 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            var a1,b1;
+            [a1,b1]=[5,7];
+            console.log(a1);
+            console.log(b1);
+            var [a,,b] = ["P1","P2","P3"];
+            console.log(a);
+            console.log(b);
+            var wd=["M","T","W","Th","F","Sa","Su"];
+            var [first,,third,...others]=wd;//using rest parameters
+            console.log(first);
+            console.log(third);
+            console.log(others);
+            var x,y;
+            [x=50,y=70]=[100];
+            console.log(x);//assinging a default value while destructing an array
+            console.log(y);
+            function stat(a,b){
+                return [a+b,(a+b)/2,a-b]
+            }
+            let [sum,avg,dif]=stat(20,10);
+            console.log(sum,avg,dif);
+        </script>
+    </body>
+</html>

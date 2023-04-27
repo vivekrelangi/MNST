@@ -1,0 +1,36 @@
+<html>
+    <head>
+        
+    </head>
+    <body style="background-color: rgb(240, 131, 202);">
+        <script type="text/javascript">
+            var cou=["HTML","PYTHON","ANDROID","MEANSTACK","RUBY"];
+            console.log(cou);
+            for(var n of cou){
+                console.log(n);
+            }
+            let n123=[];
+            n123[0]=5;
+            n123[49]=10;
+            for(var n of n123){
+                console.log(n);
+            }
+            let x=[25,12,84,98,62,78];
+            x.forEach(n=>{
+                console.log(n+1);//use of arrow function with {}
+            })
+            x.forEach(n=>console.log(n-1))
+            //normal function
+            function myFunction(e,f){
+                //do something
+                return e*y;
+            }
+            //function expression
+            let a = function(a,b){
+                return a*b;
+            }
+            //using arrow functions for only one statement can be written as follows
+            let c=(c,d) => c*d;
+        </script>
+    </body>
+</html>

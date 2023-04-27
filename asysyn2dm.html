@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            //a promise
+            let promise = new Promise(function(resolve,reject){
+                setTimeout(function (){
+                    resolve('promise resolved')},4000)
+                });
+                //async function
+            async function asynFunc(){
+                //wait until the promise resolves
+                console.log("Hai")
+                let result = await promise;
+
+                console.log(result);
+                console.log("hello");
+            }
+            asynFunc();
+            console.log("Byee");
+            //calling the async function
+           
+        </script>
+    </body>
+</html>

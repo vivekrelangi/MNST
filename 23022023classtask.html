@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+        body{
+            background-color: black;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+	<script>
+		let java = new Set();
+		let python = new Set();
+		let common = new Set();
+        function addUser() {
+			var n = document.getElementById("name").value;
+			let l = document.getElementById("language").value;
+			if (l === "Java") {
+				java.add(n);
+                console.log(java);
+			} else if (l === "Python") {
+				python.add(n);
+                console.log(python);
+			}
+            var n = document.getElementById("name").value='';
+            for (let i of python) {
+                if (java.has(i)) {
+                    common.add(i);
+                    console.log(common);
+                }
+		    }
+			Sets();
+		}
+		function Sets() {
+			let javaUsers = Array.from(java);
+			let pythonUsers = Array.from(python);
+			let commonUsers = Array.from(common);
+			let tableBody = document.getElementById("b1");
+			tableBody.innerHTML = '';
+			let maxUsers = Math.max(javaUsers.length, pythonUsers.length, commonUsers.length);
+			for (let i = 0; i < maxUsers; i++) {
+				let javaUser = javaUsers[i] || '';
+				let pythonUser = pythonUsers[i] || '';
+				let commonUser = commonUsers[i] || '';
+				let tableRow = document.createElement('tr');
+				let javaCell = document.createElement('td');
+				javaCell.innerText = javaUser;
+				let pythonCell = document.createElement('td');
+				pythonCell.innerText = pythonUser;
+				let commonCell = document.createElement('td');
+				commonCell.innerText = commonUser;
+				tableRow.appendChild(javaCell);
+				tableRow.appendChild(pythonCell);
+				tableRow.appendChild(commonCell);
+				tableBody.appendChild(tableRow);
+			}
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<form>
+			<table cellpadding="10">
+				<tr><td><label for="name">Enter Name:</label></td><td><input type="text" id="name" name="name"></td></tr>
+				<tr>
+					<td><label for="language">Language:</label></label></td>
+					<td>
+						<select id="language" name="language">
+							<option value="Java">Java</option>
+							<option value="Python">Python</option>
+						</select>
+					</td>
+				</tr>
+			</table><br>
+				<input type="button" value="Submit" onClick="addUser()" class="but"><br><br>
+			<table border="1" cellpadding="7" class="tab">
+				<thead>
+					<tr>
+						<th>JAVA</th>
+						<th>PYTHON</th>
+						<th>COMMON</th>
+					</tr>
+				</thead>
+				<tbody id="b1">
+				</tbody>
+			</table>
+		</form>
+	</center>
+</body>
+</html>

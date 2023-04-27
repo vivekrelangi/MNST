@@ -1,0 +1,37 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            const count = true;
+            let pro=new Promise(function(resolve,reject){
+                //do somthing
+                if (count) {
+                    resolve("There is a count value.");
+                }
+                else {
+                    reject("There is no count value.");
+                }
+            });
+            pro.then(function(res){
+                console.log(res);
+            });
+            pro.catch(function(res){
+                console.log(res);
+            });
+            //console.log(prom);
+            //const count = false;
+            //let countValue = new Promise(function(resolve,reject){
+                //if (count) {
+                   // resolve("There is a count value:");
+                //}
+                //else {
+                  //  reject("There is no count value:");
+                //}
+            //});
+            //console.log(countValue);
+            
+        </script>
+    </body>
+</html>

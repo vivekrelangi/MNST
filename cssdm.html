@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            div {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            color:rgb(8, 8, 8);
+            animation-name: example;
+            animation-duration: 60s;
+            text-shadow: 1px 1px ;
+            box-shadow: 0px 0px 0px 0px;
+            font-style: oblique;
+            font-size: 50px;
+            font-weight: bold;
+            transition: width 3s,height 3s;
+            letter-spacing: 7px;
+            cursor: pointer;
+            text-transform: uppercase;
+           
+          }
+          
+          @keyframes example {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+          }
+
+          div:hover {
+            width: 300px;
+            height: 300px;
+          }
+
+          @keyframes shine {
+            0% {
+                background-position: 0;
+                }
+            60% {
+                background-position: 600px;
+                }
+            100% {
+                background-position: 600px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

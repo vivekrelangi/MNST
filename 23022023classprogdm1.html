@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: black;">
+        <script type="text/javascript">
+            const person = { 
+                name: 'PRASAD',
+                age: 20
+            };
+            console.log(person.name);
+            console.log(person["age"]);
+            person.mobi='123456';
+            console.log(person.mobi);
+            console.log(person);
+            const student = { 
+                name: 'PRASAD',
+                age: 20,
+                marks: {
+                    java: 70,
+                    python: 75
+                        }
+            }
+            // accessing property of student object
+            console.log(student.marks); 
+            // accessing property of marks object
+            console.log(student.marks.python); 
+
+            const details = {
+                name: 'Sam',
+                age: 30,
+                disp: function() { console.log('hello')
+             }
+            }
+            details.disp();
+
+            let courses = [
+                {name: 'java', fees: 10},
+                {name: 'python', fees: 15},
+                {name: 'mean', fees: 20},
+                {name: 'android', fees: 18},
+                {name: 'php', fees: 8},
+            ];
+            let demand = courses.filter(function (e) {
+                return e.fees > 15;
+                });
+            console.log(demand);
+
+            const users = [
+                 { id: 1, name: 'prasad', isAdmin: false },
+                 { id: 2, name: 'durga', isAdmin: true  },
+                 { id: 3, name: 'sirisha', isAdmin: false }
+            ]
+            let admins=users.filter(user => user.isAdmin)
+            console.log(admins)
+        </script>
+    </body>
+</html>

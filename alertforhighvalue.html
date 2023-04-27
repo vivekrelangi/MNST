@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript">
+                function color(){
+                    var i=document.getElementById("tf1").value;
+                    var j=document.getElementById("tf2").value;
+                    var k=document.getElementById("tf3").value;
+                    r=parseInt(i);
+                    g=parseInt(j);
+                    b=parseInt(k);
+                    var d=document.getElementById("d1");
+                    d.style.backgroundColor='rgb('+r+','+g+','+b+')';
+                }
+                function disp(){
+                    var i=document.getElementById("tf1").value;
+                    var j=document.getElementById("tf2").value;
+                    var k=document.getElementById("tf3").value;
+                    r=parseInt(i);
+                    g=parseInt(j);
+                    b=parseInt(k);
+                    if(r>255)
+                    alert("ENTER VALUES BETWEEN 0-255")
+                    if(g>255)
+                    alert("ENTER VALUES BETWEEN 0-255")
+                    if(b>255)
+                    alert("ENTER VALUES BETWEEN 0-255")
+                }
+        </script>
+    </head>
+    <body>
+        <center>
+            <input type="text" id="tf1" size="10" onkeyup="disp()">
+            <input type="text" id="tf2" size="10" onkeyup="disp()">
+            <input type="text" id="tf3" size="10" onkeyup="disp()"><br><br>
+            <input type="button" id="btn" value="ChangeHojaSimSim" onClick="color()"><br>
+            <div id="d1" style="height:100px;width:100px; background-color: cyan;"></div>
+        </center>
+    </body>
+</html>

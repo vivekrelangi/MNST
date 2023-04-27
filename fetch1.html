@@ -1,0 +1,16 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            function fetchWelcome(){
+                const fileUrl = 'rv.txt';
+                fetch(fileUrl)
+                .then(r=>r.text())
+                .then(t=>console.log(t))
+            }
+            fetchWelcome();
+        </script>
+    </body>
+</html>

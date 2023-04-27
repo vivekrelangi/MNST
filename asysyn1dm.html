@@ -1,0 +1,22 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            async function disp(){
+                x=await 10+10;//this is a synchronous progamming function without async,await cannot be used without async and await&async are not used in synchronous programming function
+                //console.log("yo")
+                return x;//by default asynchronous function returns a promise
+            }
+            let d=disp();
+            //console.log(d);
+            //let d=disp();
+            //console.log(d);
+            //console.log("prasad");
+            d.then(function(xyz){
+                console.log(xyz);
+            });
+        </script>
+    </body>
+</html>

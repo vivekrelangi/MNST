@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function rocks(){
+                var i=document.getElementById("r").value;
+                var j=document.getElementById("g").value;
+                var k=document.getElementById("b").value;
+                r=parseInt(i);
+                g=parseInt(j);
+                b=parseInt(k);
+                var d=document.getElementById("d1");
+                d.style.backgroundColor='rgb('+r+','+g+','+b+')';
+            }
+        </script>
+    
+    </head>
+    <body style="background-color:black">
+        <form>
+            <label style="color: white;">RED:</label>
+            <input type="range" id="r" min="0" max="255" step="1" value="0" oninput="rocks()" ><br><br>
+            <label style="color: white;">GREEN:</label>
+            <input type="range" id="g" min="0" max="255" step="1" value="0" oninput="rocks()" ><br><br>
+            <label style="color: white;">BLUE:</label>
+            <input type="range" id="b" min="0" max="255" step="1" value="0" oninput="rocks()" ><br><br>
+            <center>
+            <div id="d1" style="height:400px;width:400px;background-color: rgb(165, 85, 85);"></div>
+            </center>
+        </form>
+    </body>
+</html>

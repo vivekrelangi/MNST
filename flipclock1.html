@@ -1,0 +1,58 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <style>.time {position: relative; height: 95px; width: 65px;
+            perspective: 200px; backface-visibility: hidden;
+            transform: translateZ(0); transform: translate3d(0,0,0);
+          }
+          .count {background: #202020; color: #f8f8f8; display: block;
+            font-size: 2em; line-height: 2.4em; overflow: hidden;
+            position: absolute; text-align: center;
+            top: 0; width: 100%;
+          }
+          .top {height: 50%; line-height:95px; transform-origin: 50% 100%; }
+          .bottom {line-height: 0; height: 50%; top: 50%; transform-origin: 50% 0; }
+          
+          @keyframes flipTop {
+            from {
+                transform: rotateX(0deg);
+            }
+            to {
+                transform: rotateX(-90deg);
+            }
+          }
+          @keyframes flipBottom {
+              from {
+                  transform: rotateX(90deg);
+              }
+              to {
+                  transform: rotateX(0deg);
+              }
+          }
+          
+          .flipTop {
+              animation-name: flipTop;
+              animation-duration: 0.25s;
+              animation-fill-mode: both;
+          }
+          .flipBottom {
+              animation-name: flipBottom;
+              animation-duration: 0.25s;
+               animation-delay: 0.25s;
+              animation-fill-mode: both;
+          }
+        </style>
+        
+        <script type="text/javascript">
+            
+        </script>
+        <div class="time">
+            <span class="count top flipTop">2</span>
+              <span class="count top">1</span>
+              <span class="count bottom flipBottom">1</span>
+            <span class="count bottom">2</span>
+          </div>
+    </body>
+</html>

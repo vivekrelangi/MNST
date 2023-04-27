@@ -1,0 +1,34 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            let num =[3,6,7,12,18,23,44,62,81];
+            let even_num = num.filter(function(item){
+                return item % 2 == 0;// this is an example anonymous function
+            });
+            console.log(even_num);
+            //let even_num = num.filter((item)=>item % 2 == 0);
+            //console.log(even_num);
+            let numbers = [-23,-20,-17,-12,-5,0,1,5,12,19,20]
+            let positive_array=numbers.filter(function(value) {
+                return value >= 0;
+
+            });
+
+            console.log(positive_array);
+            let names = ['Durga Prasad','Durga Rao','Durga Sirisha','Pawan','Kalyan','durga','DURGA'];
+            let arr = [3,4,5,6];
+            let modifiedArr = arr.map(function(element){
+                return element *3;
+            });
+            console.log(modifiedArr);
+            function getDurga(arr) {
+                return arr.filter(a =>a.includes("Durga"))
+            }
+ 
+            console.log(getDurga(names));
+        </script>
+    </body>
+</html>
